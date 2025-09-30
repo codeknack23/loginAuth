@@ -4,7 +4,6 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import authRoutes from "./routes/auth.js";
-import axios from "axios";
 
 dotenv.config();
 
@@ -13,7 +12,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://zesty-sherbet-e1e9eb.netlify.app/",
     credentials: true,
   })
 );
@@ -29,4 +28,4 @@ mongoose
 app.use("/api/auth", authRoutes);
 
 
-app.listen(5000, () => console.log("Server running on http://localhost:5000"));
+app.listen(5000, () => console.log("Server running"));
