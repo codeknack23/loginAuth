@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://zesty-sherbet-e1e9eb.netlify.app/",
+    origin: "https://zesty-sherbet-e1e9eb.netlify.app",
     credentials: true,
   })
 );
